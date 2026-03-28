@@ -101,22 +101,6 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-        {/* Logo */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="mb-6"
-        >
-          <Image
-            src="/images/logo-domusvita.png"
-            alt="DomusVita Gesundheit"
-            width={220}
-            height={80}
-            className="mx-auto brightness-0 invert drop-shadow-lg"
-          />
-        </motion.div>
-
         {/* Badge: Immer für Sie da */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

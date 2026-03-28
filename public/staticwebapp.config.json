@@ -1,6 +1,6 @@
 {
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": ["/_next/*", "/images/*", "/videos/*", "/icons/*", "/scroll-story/*", "/*.ico", "/*.png", "/*.jpg", "/*.jpeg", "/*.svg", "/*.mp4", "/*.webp", "/*.json", "/*.txt", "/*.xml"]
+    "exclude": ["/_next/**", "/images/**", "/videos/**", "/icons/**", "/scroll-story/**", "/*.ico", "/*.png", "/*.jpg", "/*.jpeg", "/*.svg", "/*.mp4", "/*.webp", "/*.json", "/*.txt", "/*.xml", "/*.css", "/*.js"]
   }
 }
