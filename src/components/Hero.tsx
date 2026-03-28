@@ -63,7 +63,7 @@ export default function Hero() {
       {/* Background */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-main.jpeg"
+          src="/images/hero-beratung.jpg"
           alt="DomusVita Gesundheit — Ambulante Pflege in Berlin"
           fill
           className="object-cover"
