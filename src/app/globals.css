@@ -1,26 +1,170 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F0F7FC;
+  --foreground: #1A2E4A;
+  --dv-dark: #265D90;
+  --dv-light: #67B5EA;
+  --dv-teal: #48615C;
+  --dv-grey: #A4A4A4;
+  --dv-cream: #F0F7FC;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  /* DomusVita Lichtblau scale */
+  --color-dv-50: #F0F7FC;
+  --color-dv-100: #DBEEF9;
+  --color-dv-200: #B3DCF3;
+  --color-dv-300: #8ACAED;
+  --color-dv-400: #67B5EA;
+  --color-dv-500: #4A9DD4;
+  --color-dv-600: #265D90;
+  --color-dv-700: #1E4A73;
+  --color-dv-800: #163A5C;
+  --color-dv-900: #0F2A45;
+  /* Navy / Dark backgrounds */
+  --color-navy-50: #F8FAFC;
+  --color-navy-100: #F1F5F9;
+  --color-navy-200: #E2E8F0;
+  --color-navy-300: #CBD5E1;
+  --color-navy-400: #94A3B8;
+  --color-navy-500: #64748B;
+  --color-navy-600: #475569;
+  --color-navy-700: #334155;
+  --color-navy-800: #1A2E4A;
+  --color-navy-900: #0F1E33;
+  /* Teal (from brand) */
+  --color-teal-400: #5A8A7D;
+  --color-teal-500: #48615C;
+  --color-teal-600: #3A4F4B;
+  /* Accent (soft rose, subdued) */
+  --color-rose-400: #FB7185;
+  --color-rose-500: #F43F5E;
+  --color-rose-600: #E11D48;
+  /* Cream */
+  --color-cream: #F0F7FC;
+  /* Official brand grey (Mittelgrau 074, #A4A4A4) */
+  --color-dv-grey: #A4A4A4;
+  /* Legacy sage mapped to teal */
+  --color-sage-400: #5A8A7D;
+  --color-sage-500: #48615C;
+  /* Keep warm tokens for backwards compat but map to DV blue */
+  --color-warm-50: #F0F7FC;
+  --color-warm-100: #DBEEF9;
+  --color-warm-200: #B3DCF3;
+  --color-warm-300: #8ACAED;
+  --color-warm-400: #67B5EA;
+  --color-warm-500: #4A9DD4;
+  --color-warm-600: #265D90;
+  --color-warm-700: #1E4A73;
+  --color-warm-800: #163A5C;
+  --color-warm-900: #0F2A45;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F0F7FC;
+}
+::-webkit-scrollbar-thumb {
+  background: #67B5EA;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #265D90;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-warm {
+  background: rgba(240, 247, 252, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(103, 181, 234, 0.15);
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.1); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.1); }
+  56% { transform: scale(1); }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* DomusVita gradient text: Dunkelblau → Lichtblau → Dunkelblau */
+.gradient-text {
+  background: linear-gradient(135deg, #265D90 0%, #67B5EA 50%, #265D90 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+@keyframes aurora {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.aurora-bg {
+  background: linear-gradient(
+    135deg,
+    rgba(103, 181, 234, 0.1) 0%,
+    rgba(72, 97, 92, 0.08) 25%,
+    rgba(38, 93, 144, 0.08) 50%,
+    rgba(103, 181, 234, 0.1) 75%,
+    rgba(72, 97, 92, 0.08) 100%
+  );
+  background-size: 400% 400%;
+  animation: aurora 15s ease-in-out infinite;
+}
+
+.noise-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
 }
