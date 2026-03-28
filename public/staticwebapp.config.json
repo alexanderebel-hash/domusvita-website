@@ -1,18 +1,6 @@
 {
-  "routes": [
-    {
-      "route": "/*",
-      "rewrite": "/index.html"
-    }
-  ],
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": ["/_next/*", "/images/*", "/videos/*", "/icons/*", "/*.ico", "/*.png", "/*.jpg", "/*.jpeg", "/*.svg", "/*.mp4", "/*.json"]
-  },
-  "responseOverrides": {
-    "404": {
-      "rewrite": "/index.html",
-      "statusCode": 200
-    }
+    "exclude": ["/_next/*", "/images/*", "/videos/*", "/icons/*", "/scroll-story/*", "/*.ico", "/*.png", "/*.jpg", "/*.jpeg", "/*.svg", "/*.mp4", "/*.webp", "/*.json", "/*.txt", "/*.xml"]
   }
 }
