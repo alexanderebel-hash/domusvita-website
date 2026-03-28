@@ -16,10 +16,10 @@ export default function UeberUnsPreview() {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden aspect-[4/3]">
                 <Image
-                  src="/images/team/gf-portrait.jpg"
+                  src="/images/treptow/portrait-2.jpg"
                   alt="Lukas Dahrendorf und Alexander Ebel — Geschäftsführer DomusVita"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-900/40 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">

@@ -29,8 +29,8 @@ export default function LeistungenPage() {
         <section className="relative py-24 md:py-32 overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/images/hero-beratung.jpg"
-              alt="DomusVita Pflegeberatung"
+              src="/images/treptow/situativ-5.jpg"
+              alt="DomusVita — Unser Standort in Treptow"
               fill
               className="object-cover object-center"
             />
@@ -100,12 +100,12 @@ export default function LeistungenPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                { src: "/images/wg-drachenwiese/gebaeude.jpg", alt: "WG Drachenwiese — Gebäude", span: "lg:col-span-2" },
-                { src: "/images/wg-drachenwiese/wohnzimmer.jpg", alt: "Gemeinschaftlicher Wohnbereich", span: "" },
-                { src: "/images/wg-drachenwiese/esszimmer.jpg", alt: "Esszimmer der WG", span: "" },
-                { src: "/images/wg-drachenwiese/zimmer.jpg", alt: "Privatzimmer", span: "" },
-                { src: "/images/wg-drachenwiese/bereich.jpg", alt: "Wohnbereich", span: "" },
-                { src: "/images/wg-drachenwiese/detail.jpg", alt: "Detail", span: "" },
+                { src: "/images/wg-drachenwiese/01.jpg", alt: "Gemeinschaftlicher Wohnbereich mit Kamin", span: "lg:col-span-2" },
+                { src: "/images/wg-drachenwiese/04.jpg", alt: "Pflegerin begleitet Bewohnerin im Rollstuhl", span: "" },
+                { src: "/images/wg-drachenwiese/07.jpg", alt: "Bewohner im Garten der WG Drachenwiese", span: "" },
+                { src: "/images/wg-drachenwiese/21.jpg", alt: "Pflegerin im persönlichen Gespräch mit Bewohner", span: "" },
+                { src: "/images/wg-drachenwiese/17.jpg", alt: "Helles Esszimmer der WG Drachenwiese", span: "" },
+                { src: "/images/wg-drachenwiese/13.jpg", alt: "Gemeinschaft auf der Terrasse — Bewohner und Pflege", span: "lg:col-span-2" },
               ].map((foto, i) => (
                 <AnimatedSection
                   key={foto.src}
@@ -140,7 +140,7 @@ export default function LeistungenPage() {
         <section className="py-0">
           <div className="relative h-64 md:h-80">
             <Image
-              src="/images/team/team-tisch.jpg"
+              src="/images/treptow/situativ-6.jpg"
               alt="DomusVita Team"
               fill
               className="object-cover object-center"

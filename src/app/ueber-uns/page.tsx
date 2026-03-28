@@ -38,7 +38,7 @@ export default function UeberUnsPage() {
         <section className="relative py-24 md:py-32 overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/images/team/team-tisch.jpg"
+              src="/images/treptow/situativ-6.jpg"
               alt="DomusVita Team — Ambulante Pflege Berlin"
               fill
               className="object-cover object-center"
@@ -67,10 +67,10 @@ export default function UeberUnsPage() {
               <AnimatedSection direction="left">
                 <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl">
                   <Image
-                    src="/images/team/gf-portrait.jpg"
+                    src="/images/treptow/portrait-2.jpg"
                     alt="Lukas Dahrendorf und Alexander Ebel — Geschäftsführer DomusVita"
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-center"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-900/50 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
@@ -197,16 +197,16 @@ export default function UeberUnsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 rounded-3xl overflow-hidden shadow-xl">
               <div className="relative h-72 md:h-96">
                 <Image
-                  src="/images/team/team-meeting.jpg"
-                  alt="DomusVita Team beim Teammeeting"
-                  fill className="object-cover"
+                  src="/images/treptow/situativ-4.jpg"
+                  alt="DomusVita — Beratungsgespräch mit Klienten"
+                  fill className="object-cover object-center"
                 />
               </div>
               <div className="relative h-72 md:h-96">
                 <Image
-                  src="/images/team/team-beratung.jpg"
-                  alt="DomusVita Beratungsgespräch"
-                  fill className="object-cover"
+                  src="/images/treptow/situativ-1.jpg"
+                  alt="DomusVita Team im Gespräch"
+                  fill className="object-cover object-center"
                 />
               </div>
             </div>
