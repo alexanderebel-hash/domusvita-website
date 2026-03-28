@@ -82,6 +82,60 @@ export default function LeistungenPage() {
           </div>
         </section>
 
+        {/* WG Drachenwiese — Pflege in Wohngemeinschaften */}
+        <section className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <AnimatedSection className="text-center mb-12">
+              <span className="inline-block text-sm font-semibold text-dv-600 tracking-wider uppercase mb-4">
+                Besonderes Angebot
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-navy-800 mb-4">
+                Pflege in der <span className="gradient-text">Wohngemeinschaft</span>
+              </h2>
+              <p className="text-navy-500 max-w-2xl mx-auto leading-relaxed">
+                Die Wohngemeinschaft Drachenwiese bietet pflegebedürftigen Menschen ein selbstbestimmtes
+                Leben in gemeinschaftlicher Umgebung — mit professioneller Unterstützung von DomusVita.
+              </p>
+            </AnimatedSection>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                { src: "/images/wg-drachenwiese/gebaeude.jpg", alt: "WG Drachenwiese — Gebäude", span: "lg:col-span-2" },
+                { src: "/images/wg-drachenwiese/wohnzimmer.jpg", alt: "Gemeinschaftlicher Wohnbereich", span: "" },
+                { src: "/images/wg-drachenwiese/esszimmer.jpg", alt: "Esszimmer der WG", span: "" },
+                { src: "/images/wg-drachenwiese/zimmer.jpg", alt: "Privatzimmer", span: "" },
+                { src: "/images/wg-drachenwiese/bereich.jpg", alt: "Wohnbereich", span: "" },
+                { src: "/images/wg-drachenwiese/detail.jpg", alt: "Detail", span: "" },
+              ].map((foto, i) => (
+                <AnimatedSection
+                  key={foto.src}
+                  delay={i * 0.08}
+                  className={`relative overflow-hidden rounded-2xl group ${foto.span}`}
+                >
+                  <div className="relative h-56 md:h-64">
+                    <Image
+                      src={foto.src}
+                      alt={foto.alt}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/20 transition-all duration-300" />
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+
+            <AnimatedSection className="mt-10 text-center">
+              <a
+                href="tel:+493053005550"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-dv-600 text-white font-semibold hover:bg-dv-700 transition-all hover:scale-105"
+              >
+                Mehr zur WG Drachenwiese erfahren
+              </a>
+            </AnimatedSection>
+          </div>
+        </section>
+
         {/* Info-Strip mit echtem Team-Meeting-Foto */}
         <section className="py-0">
           <div className="relative h-64 md:h-80">

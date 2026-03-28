@@ -60,8 +60,9 @@ function BerlinSkyline() {
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
+      {/* Background — Video mit Foto-Fallback */}
       <div className="absolute inset-0">
+        {/* Fallback-Foto (poster) bleibt sichtbar bis Video geladen ist */}
         <Image
           src="/images/hero-beratung.jpg"
           alt="DomusVita Gesundheit — Ambulante Pflege in Berlin"
@@ -69,6 +70,17 @@ export default function Hero() {
           className="object-cover"
           priority
         />
+        {/* Video-Background: autoplay, muted, loop */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          aria-hidden="true"
+        >
+          <source src="/videos/domusvita-main.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-[#0F2A45]/82 via-[#1A2E4A]/62 to-[#0F2A45]/92" />
         <div className="absolute inset-0 bg-gradient-to-t from-dv-600/20 via-transparent to-dv-400/10" />
       </div>

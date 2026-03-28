@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import AnimatedSection from "@/components/AnimatedSection";
+import FAQ from "@/components/FAQ";
 import { motion } from "framer-motion";
 import { Info, CheckCircle } from "lucide-react";
 
@@ -138,26 +139,7 @@ export default function KostenPage() {
           </div>
         </section>
 
-        {/* FAQ teaser */}
-        <section className="py-20 bg-white">
-          <div className="max-w-3xl mx-auto px-6 text-center">
-            <AnimatedSection>
-              <h2 className="text-3xl font-bold text-navy-800 mb-4">
-                Haben Sie Fragen zur Abrechnung?
-              </h2>
-              <p className="text-navy-500 mb-8 leading-relaxed">
-                Wir unterstützen Sie gerne bei der Antragstellung für den Pflegegrad und erklären
-                alle Leistungen, auf die Sie Anspruch haben — kostenlos und unverbindlich.
-              </p>
-              <a
-                href="tel:+493053005550"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-dv-600 text-white font-semibold hover:bg-dv-700 transition-all hover:scale-105"
-              >
-                Beratungsgespräch vereinbaren
-              </a>
-            </AnimatedSection>
-          </div>
-        </section>
+        <FAQ />
 
         <CTA />
       </main>
